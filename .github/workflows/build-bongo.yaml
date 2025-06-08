@@ -11,5 +11,5 @@ jobs:
       board: '["nice_nano_v2"]'
       alphas: '["QWERTY"]'
       shield: '["corne_left nice_oled","corne_right nice_oled"]'
-      kconfig: '["CONFIG_ZMK_DISPLAY=y\nCONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM=y\nCONFIG_ZMK_STUDIO=y\nCONFIG_NICE_OLED_GEM_ANIMATION_MS=480"]'
+      kconfig: '["CONFIG_ZMK_DISPLAY=y\nCONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM=y\nCONFIG_ZMK_STUDIO=y\nCONFIG_NICE_OLED_GEM_ANIMATION_MS=1920"]'
       modules: '["bomcon123456/zmk-nice-oled/main"]'
