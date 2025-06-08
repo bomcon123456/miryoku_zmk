@@ -1,7 +1,7 @@
 # Copyright 2022 Manna Harbour
 # https://github.com/manna-harbour/miryoku
 
-name: "Build bongo right"
+name: "Build bongo"
 on: workflow_dispatch
 jobs:
   build:
@@ -10,6 +10,6 @@ jobs:
     with:
       board: '["nice_nano_v2"]'
       alphas: '["QWERTY"]'
-      shield: '["corne_right"]'
-      kconfig: '["CONFIG_ZMK_DISPLAY=y\nCONFIG_ZMK_DISPLAY_WORK_QUEUE_DEDICATED=y\nCONFIG_ZMK_DISPLAY_DEDICATED_THREAD_STACK_SIZE=2048\nCONFIG_ZMK_DISPLAY_DEDICATED_THREAD_PRIORITY=1\nCONFIG_ZMK_WPM=y\nCONFIG_ZMK_WIDGET_WPM_STATUS=y\nCONFIG_ZMK_WIDGET_BONGO_CAT=y\nCONFIG_ZMK_WIDGET_LAYER_STATUS=n\nCONFIG_ZMK_WIDGET_BATTERY_STATUS=n\nCONFIG_ZMK_WIDGET_OUTPUT_STATUS=n\n"]'
-      modules: '["SamIAm2000/zmk/bongo-cat-dedicated-work-queue"]'
+      shield: '["corne_left nice_oled","corne_right nice_oled"]'
+      kconfig: '["CONFIG_ZMK_DISPLAY=y\nCONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM=y\nCONFIG_ZMK_STUDIO=y"]'
+      modules: '["bomcon123456/zmk-nice-oled/main"]'
