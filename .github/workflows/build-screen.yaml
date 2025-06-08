@@ -10,6 +10,6 @@ jobs:
     with:
       board: '["nice_nano_v2"]'
       alphas: '["QWERTY"]'
-      shield: '["kyria_left nice_view_adapter nice_view_gem","kyria_right nice_view_adapter nice_view_gem"]'
+      shield: '["corne_left nice_view_adapter nice_view_gem","corne_right nice_view_adapter nice_view_gem"]'
       kconfig: '["CONFIG_ZMK_DISPLAY=y\nCONFIG_ZMK_STUDIO=y\nCONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM=y"]'
       modules: '["M165437/nice-view-gem/main"]'
