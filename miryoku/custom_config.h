@@ -25,6 +25,10 @@ MIRYOKU_X(FUN,    "Fun")
 #define u_to_U_TAP u_to_U_BASE
 #define u_to_U_EXTRA u_to_U_BASE
 #define u_to_U_BUTTON u_to_U_BASE
+
+// support zmk studio
+#define U_STU &studio_unlock
+
 //
 //
 #define MIRYOKU_LAYER_BASE \
@@ -46,13 +50,13 @@ U_NP,              U_NA,              &kp RALT,          &u_to_U_SYM,       &u_t
 U_NP,              U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              U_BTN2,            U_BTN1,            U_BTN3,            U_NP,              U_NP,              U_NP
 
 #define MIRYOKU_LAYER_MEDIA \
-U_NP,              U_BOOT,            &u_to_U_TAP,       &u_to_U_EXTRA,     &u_to_U_BASE,      U_NA,              U_NP,         U_NP,         U_NP,         U_NP,         U_NP,         U_NP, \
-U_NP,              &kp LGUI,          &kp LALT,          &kp LCTRL,         &kp LSHFT,         U_NA,              &kp C_PREV,        &kp C_VOL_DN,      &kp C_VOL_UP,      &kp C_NEXT,        U_NP,          U_NP, \
+U_NP,              U_BOOT,            &u_to_U_TAP,       &u_to_U_EXTRA,     &u_to_U_BASE,      U_NA,              U_NP,               U_NP,             U_NP,              U_NP,              U_NP,              U_STU, \
+U_NP,              &kp LGUI,          &kp LALT,          &kp LCTRL,         &kp LSHFT,         U_NA,              &kp C_PREV,        &kp C_VOL_DN,      &kp C_VOL_UP,      &kp C_NEXT,        U_NP,              U_NP, \
 U_NP,              U_NA,              &kp RALT,          &u_to_U_FUN,       &u_to_U_MEDIA,     U_NA,              &u_bt_sel_0,       &u_bt_sel_1,       &u_bt_sel_2,       &u_bt_sel_3,       &u_out_tog,        U_NP, \
 U_NP,              U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              &kp C_STOP,        &kp C_PP,          &kp C_MUTE,        U_NP,              U_NP,              U_NP
 
 #define MIRYOKU_LAYER_NUM \
-U_NP,              &kp LBKT,          &kp N7,            &kp N8,            &kp N9,            &kp RBKT,          U_NA,              &u_to_U_BASE,      &u_to_U_EXTRA,     &u_to_U_TAP,       U_BOOT,            U_NP, \
+&kp GRAVE,         &kp LBKT,          &kp N7,            &kp N8,            &kp N9,            &kp RBKT,          U_NA,              &u_to_U_BASE,      &u_to_U_EXTRA,     &u_to_U_TAP,       U_BOOT,            U_NP, \
 U_NP,              &kp SEMI,          &kp N4,            &kp N5,            &kp N6,            &kp EQUAL,         U_NA,              &kp LSHFT,         &kp LCTRL,         &kp LALT,          &kp LGUI,          U_NP, \
 U_NP,              &kp GRAVE,         &kp N1,            &kp N2,            &kp N3,            &kp BSLH,          U_NA,              &u_to_U_NUM,       &u_to_U_NAV,       &kp RALT,          U_NA,              U_NP, \
 U_NP,              U_NP,              U_NP,              &kp DOT,           &kp N0,            &kp MINUS,         U_NA,              U_NA,              U_NA,              U_NP,              U_NP,              U_NP

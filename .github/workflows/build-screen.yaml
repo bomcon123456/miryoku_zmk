@@ -1,0 +1,15 @@
+# Copyright 2022 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: "Build with gem screen"
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["nice_nano_v2"]'
+      alphas: '["QWERTY"]'
+      shield: '["corne_left nice_view_adapter nice_view_gem","corne_right nice_view_adapter nice_view_gem"]'
+      kconfig: '["CONFIG_ZMK_DISPLAY=y", "CONFIG_ZMK_STUDIO=y", "CONFIG_ZMK_EXT_DISPLAY=y"]'
+      modules: '["M165437/nice-view-gem/main"]'

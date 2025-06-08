@@ -19,7 +19,7 @@ on:
         default: '["default"]'
       tap:
         type: string
-        default: '["default"]'  
+        default: '["default"]'
       nav:
         type: string
         default: '["default"]'
@@ -44,7 +44,6 @@ on:
       modules:
         type: string
         default: '["default"]'
-  
 
 jobs:
   main:
@@ -270,7 +269,7 @@ jobs:
           echo "::endgroup::"
 
           echo "::group::modules"
-          for module in $modules 
+          for module in $modules  
           do
             user=`echo "$module" | cut -f 1 -d '/'`
             repo=`echo "$module" | cut -f 2 -d '/'`
@@ -326,7 +325,7 @@ jobs:
           EX_DATAERR='65'
           cd "${GITHUB_WORKSPACE}/zmk/app"
           {
-            west $west_debug build -b ${{ matrix.board }} $west_build_debug -- ${{ steps.main.outputs.shield_arg }} ${{ steps.main.outputs.modules_arg }} -DZMK_CONFIG="${GITHUB_WORKSPACE}/miryoku_zmk/config" ||
+            west $west_debug build -b ${{ matrix.board }} $west_build_debug -S studio-rpc-usb-uart -- ${{ steps.main.outputs.shield_arg }} ${{ steps.main.outputs.modules_arg }} -DZMK_CONFIG="${GITHUB_WORKSPACE}/miryoku_zmk/config" ||
             echo "$build_failed_message $?." ;
           } 2>&1 | tee "$log"
           if grep -q 'Invalid BOARD; see above.' "$log"
@@ -372,4 +371,3 @@ jobs:
         with:
           name: ${{ steps.main.outputs.run_name }}
           path: ${{ steps.main.outputs.artifact_dir }}
-
