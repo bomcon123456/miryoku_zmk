@@ -1,0 +1,15 @@
+# Copyright 2022 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: "Build static bongo"
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["nice_nano_v2"]'
+      alphas: '["QWERTY"]'
+      shield: '["corne_left nice_oled","corne_right nice_oled"]'
+      kconfig: '["CONFIG_ZMK_DISPLAY=y\nCONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM=y\nCONFIG_ZMK_STUDIO=y\nCONFIG_NICE_OLED_GEM_ANIMATION_MS=1920\nCONFIG_NICE_VIEW_WIDGET_INVERTED=n"]'
+      modules: '["bomcon123456/zmk-nice-oled/staticbongo"]'
