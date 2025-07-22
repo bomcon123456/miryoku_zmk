@@ -1,0 +1,18 @@
+# Copyright 2022 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: "Build bongo no WPM"
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["nice_nano_v2"]'
+      alphas: '["QWERTY"]'
+      shield: '["corne_left nice_oled","corne_right nice_oled"]'
+      kconfig: '["CONFIG_ZMK_DISPLAY=y\nCONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM=y\nCONFIG_ZMK_STUDIO=y\nCONFIG_NICE_OLED_GEM_ANIMATION_MS=1920\nCONFIG_NICE_VIEW_WIDGET_INVERTED=n\nCONFIG_NICE_OLED_WIDGET_WPM=n\nCONFIG_NICE_OLED_WIDGET_WPM_LUNA=n\nCONFIG_NICE_OLED_WIDGET_HID_INDICATORS=n\nCONFIG_NICE_OLED_WIDGET_HID_INDICATORS_LUNA=n\nCONFIG_NICE_OLED_WIDGET_MODIFIERS_INDICATORS=n\nCONFIG_NICE_OLED_WIDGET_MODIFIERS_INDICATORS_LUNA=n"]'
+      modules: '["bomcon123456/zmk-nice-oled/main"]'
+
+
+
