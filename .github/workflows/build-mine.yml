@@ -8,7 +8,7 @@ jobs:
     uses: ./.github/workflows/main.yml
     secrets: inherit
     with:
-      board: '["nice_nano_v2"]'
+      board: '["seeeduino_xiao_ble"]'
       alphas: '["QWERTY"]'
-      shield: '["corne_left","corne_right"]'
+      shield: '["totem_left","totem_right"]'
       kconfig: '["CONFIG_ZMK_DISPLAY=y"]'
